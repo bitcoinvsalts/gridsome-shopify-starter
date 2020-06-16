@@ -1,8 +1,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d38cd58f-ae41-48e5-8881-85bdd4357695/deploy-status)](https://app.netlify.com/sites/gridsome-shopify/deploys)
 
-# Shopify starter for Gridsome
+# Shopify PWA starter for Gridsome
 
-This is a boilerplate starter, aiming to showcase how Gridsome and Shopify can work together, to create an amazingly fast shopping experience for consumers. [View Demo](https://gridsome-shopify.netlify.com)
+This repo is a fork of: https://github.com/thetre97/gridsome-starter-shopify 
+
+This is a boilerplate starter, optmized to reach the highest scores on Google Lighthouse, aiming to showcase how Gridsome and Shopify can work together, to create an amazingly fast shopping experience for consumers. [View Demo](https://gridsome-shopify.netlify.com)
 
 This starter uses a source plugin ([`gridsome-source-shopify`](https://gridsome.org/plugins/gridsome-source-shopify)) to pull data from Shopify's Storefront API, and load it into Gridsome's data store - which you can then use to create pages (note that this only runs at build time).
 It also uses the [Vue Apollo](https://apollo.vuejs.org) plugin client-side, to send queries/mutations (i.e. `createCheckout`) to the [Storefront API](https://help.shopify.com/en/api/storefront-api) when running in the browser.
