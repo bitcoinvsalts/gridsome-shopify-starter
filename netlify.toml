@@ -1,0 +1,7 @@
+[build]
+  publish = "dist"
+  command = "gridsome build"
+  
+[template.environment]
+  GRIDSOME_SHOPIFY_STOREFRONT = "Your Shopify Storefront Name"
+  GRIDSOME_SHOPIFY_STOREFRONT_TOKEN = "Your Shopify Storefront Token"
