@@ -1,6 +1,6 @@
 module.exports = {
   siteName: 'Gridsome Shopify Starter',
-  siteUrl: 'https://gridsome-shopify-starter.netlify.app',
+  siteUrl: 'https://gridsome-shopify.netlify.app/',
   siteDescription: 'PWA Headless ecommerce Gridsome Shopify starter',
   titleTemplate: '%s - Gridsome + Shopify',
   icon: {

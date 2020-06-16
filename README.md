@@ -1,8 +1,8 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f49331f9-7aa8-41d9-8e57-913af6b1638c/deploy-status)](https://app.netlify.com/sites/gridsome-shopify-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d38cd58f-ae41-48e5-8881-85bdd4357695/deploy-status)](https://app.netlify.com/sites/gridsome-shopify/deploys)
 
 # Shopify starter for Gridsome
 
-This is a boilerplate starter, aiming to showcase how Gridsome and Shopify can work together, to create an amazingly fast shopping experience for consumers. [View Demo](https://gridsome-shopify-starter.netlify.com)
+This is a boilerplate starter, aiming to showcase how Gridsome and Shopify can work together, to create an amazingly fast shopping experience for consumers. [View Demo](https://gridsome-shopify.netlify.com)
 
 This starter uses a source plugin ([`gridsome-source-shopify`](https://gridsome.org/plugins/gridsome-source-shopify)) to pull data from Shopify's Storefront API, and load it into Gridsome's data store - which you can then use to create pages (note that this only runs at build time).
 It also uses the [Vue Apollo](https://apollo.vuejs.org) plugin client-side, to send queries/mutations (i.e. `createCheckout`) to the [Storefront API](https://help.shopify.com/en/api/storefront-api) when running in the browser.
@@ -27,12 +27,12 @@ You can either directly download this repository, or use Gridsome's CLI to downl
 
 ```bash
 # Clone repository
-git clone https://github.com/thetre97/gridsome-starter-shopify.git
+git clone https://github.com/jsappme/gridsome-shopify-starter.git
 npm install # or
 yarn install
 
 # Download with CLI
-gridsome create my-gridsome-site thetre97/gridsome-starter-shopify
+gridsome create my-gridsome-site jsappme/gridsome-shopify-starter
 ```
 
 ## Developing
