@@ -21,9 +21,28 @@
         <span aria-hidden="true" />
       </button>
     </div>
+
     <div
       class="navbar-menu"
       :class="{'is-active': isMenuActive}">
+      <div class="navbar-start">
+        <g-link
+          to="/collections"
+          class="navbar-item">
+          Collections
+        </g-link>
+        <g-link
+          to="/"
+          class="navbar-item">
+          Contact
+        </g-link>
+        <g-link
+          to="/"
+          class="navbar-item">
+          About
+        </g-link>
+      </div>
+
       <div class="navbar-end">
         <div
           class="navbar-item has-dropdown"
