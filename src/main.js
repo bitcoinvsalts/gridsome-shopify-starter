@@ -14,9 +14,14 @@ import fetch from 'isomorphic-fetch'
 import DefaultLayout from '~/layouts/Default.vue'
 
 // Styles
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+//import Buefy from 'buefy'
+//import 'buefy/dist/buefy.css'
+
 import 'typeface-prata'
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default function (Vue, { appOptions }) {
   // Set default layout as a global component
@@ -25,8 +30,10 @@ export default function (Vue, { appOptions }) {
   // Import global plugins
   Vue.use(Vuex)
   Vue.use(VueApollo)
-  Vue.use(Buefy)
+  //Vue.use(Buefy)
   Vue.use(Notifications)
+  Vue.use(BootstrapVue)
+  Vue.use(IconsPlugin)
 
   // Create Apollo client
   const apolloClient = new ApolloClient({

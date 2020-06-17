@@ -11,6 +11,8 @@
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/plugin-sitemap": "^0.3.0",
     "apollo-boost": "0.4.9-test.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
     "buefy": "^0.8.20",
     "currency.js": "^1.2.2",
     "graphql-tag": "^2.10.3",
