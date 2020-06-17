@@ -2,16 +2,14 @@
   "name": "gridsome-shopify-starter",
   "private": true,
   "scripts": {
-    "build": "gridsome build && npm run purgecss",
+    "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "purgecss": "node_modules/purgecss/bin/purgecss -c ./purgecss.config.js -o ./dist/assets/css"
+    "explore": "gridsome explore"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/plugin-sitemap": "^0.3.0",
     "apollo-boost": "0.4.9-test.0",
-    "buefy": "^0.8.20",
     "currency.js": "^1.2.2",
     "graphql-tag": "^2.10.3",
     "gridsome": "^0.7.17",
@@ -26,6 +24,6 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "purgecss": "^2.3.0"
+    "gridsome-plugin-tailwindcss": "^2.2.48"
   }
 }

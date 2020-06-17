@@ -14,8 +14,8 @@ import fetch from 'isomorphic-fetch'
 import DefaultLayout from '~/layouts/Default.vue'
 
 // Styles
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+//import Buefy from 'buefy'
+//import 'buefy/dist/buefy.css'
 import 'typeface-prata'
 
 export default function (Vue, { appOptions }) {
@@ -25,7 +25,7 @@ export default function (Vue, { appOptions }) {
   // Import global plugins
   Vue.use(Vuex)
   Vue.use(VueApollo)
-  Vue.use(Buefy)
+  //Vue.use(Buefy)
   Vue.use(Notifications)
 
   // Create Apollo client
