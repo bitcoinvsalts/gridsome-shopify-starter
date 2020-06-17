@@ -1,80 +1,24 @@
 <template>
   <Layout>
-    <div
-      v-if="collection"
-      class="hero is-large">
-      <div class="container">
-        <div class="columns">
-          <div class="column header">
-            <div class="header-content">
-              <h1 class="title is-size-1 is-family-secondary">
-                Our Core Collection
-              </h1>
-              <div
-                v-html="collection.descriptionHtml"
-                class="content" />
-              <g-link
-                :to="`collection/${collection.handle}`"
-                class="button">
-                Shop Now
-              </g-link>
-            </div>
-          </div>
-          <div class="column is-three-fifths">
-            <figure class="image">
-              <img
-                :src="collection.image.src"
-                :alt="collection.image.altText">
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class="container has-text-centered">
-      <br>
-      <hr>
-      <h3 class="title is-size-4 is-family-secondary">
-        Featured Products
-      </h3>
-      <hr>
-      <br>
-      <div class="columns is-multiline">
-        <div
-          v-for="({ node: product }) in featuredProducts"
-          :key="product.id"
-          class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <g-image
-                  :src="product.images[0].src"
-                  :alt="product.images[0].altText || product.title" />
-              </figure>
-            </div>
-            <div class="card-content has-text-left">
-              <div class="media">
-                <div class="media-content">
-                  <p class="is-4 is-family-secondary">
-                    {{ product.title }}
-                  </p>
-                  <p class="subtitle is-6">
-                    {{ product.priceRange.minVariantPrice.amount }}
-                  </p>
-                </div>
-              </div>
 
-              <div
-                v-html="product.descriptionHtml"
-                class="content" />
-              <div class="field is-grouped is-grouped-right">
-                <div class="control">
-                  <g-link
-                    :to="`product/${product.handle}`"
-                    class="button is-primary is-outlined">
-                    View Product
-                  </g-link>
+    <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
+      <div class="text-4xl font-bold w-full text-center">
+        <div class="leading-tight font-serif">How to deploy a PWA headless <span class="text-green-700">Shopify</span> site using <span class="text-green-700">Gridsome</span>.</div>
+      </div>
+    </div>
+
+    <div id="products" class="flex flex-wrap mb-4 max-w-5xl mx-auto">
+			<div class="md:w-1/2 lg:w-1/3 w-full px-2" v-on:click="selectProduct({ node: product })" v-for="({ node: product }) in featuredProducts">
+        <div class="mx-auto max-w-sm overflow-hiddenmx-auto cursor-pointer duration-500 transform hover:scale-110">
+          <div class="w-full rounded-xl h-64 bg-no-repeat bg-contain bg-bottom" :style="{'background-image': 'url(' + product.images[0].src + ')' }"></div>
+            <div class="px-6 pb-4 pt-8 mx-4 -mt-4 mb-4 relative rounded-xl bg-white opacity-75 hover:opacity-100">
+              <div class="font-bold text-xl mb-2">{{ product.title }}</div>
+                <div class="flex text-sm">
+                  <div class="w-2/3 font-bold">
+                    <span v-if="product.priceRange.minVariantPrice.amount">
+                      Price : {{ product.priceRange.minVariantPrice.amount }}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,19 +26,24 @@
         </div>
       </div>
     </div>
+
   </Layout>
 </template>
 
 <script>
 export default {
-  /*
   metaInfo: {
-    title: '',
+    title: 'Home'
   },
-  */
   computed: {
     collection () { return this.$page.allShopifyCollection.edges.length && this.$page.allShopifyCollection.edges[ 0 ].node },
     featuredProducts () { return this.$page.allShopifyProduct.edges }
+  },
+  methods: {
+		selectProduct(product) {
+      console.log("/product/" + product.node.handle)
+      this.$router.push({ path: "/product/" + product.node.handle })
+    },
   }
 }
 </script>
@@ -137,16 +86,3 @@ query ShopifyProducts {
   }
 }
 </page-query>
-
-<style scoped>
-.header {
-  align-items: center;
-  display: flex;
-}
-.header-content {
-  text-align: center;
-}
-.title {
-  font-family: "Prata", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
-}
-</style>

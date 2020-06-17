@@ -1,3 +1,9 @@
+// This is where project configuration and plugin options are located.
+// Learn more: https://gridsome.org/docs/config
+
+// Changes here require a server restart.
+// To restart press CTRL + C in terminal and run `gridsome develop`
+
 module.exports = {
   siteName: 'Gridsome Shopify Starter',
   siteUrl: 'https://gridsome-shopify.netlify.app/',
@@ -7,38 +13,9 @@ module.exports = {
     favicon: "./src/favicon.png",
     touchicon: "./src/favicon.png"
   },
-  templates: {
-    ShopifyProduct: [
-      {
-        path: '/product/:handle',
-        component: './src/templates/Product.vue'
-      }
-    ],
-    ShopifyCollection: [
-      {
-        path: '/collection/:handle',
-        component: './src/templates/Collection.vue'
-      }
-    ]
-  },
   plugins: [
     'gridsome-plugin-robots',
-    {
-      use: 'gridsome-plugin-tailwindcss',
-      /**
-      * These are the default options. You don't need to set any options to get
-      * going. Seriously, you don't need to declare tailwind.config.js.
-
-      options: {
-        tailwindConfig: './tailwind.config.js',
-        purgeConfig: {},
-        presetEnvConfig: {},
-        shouldPurge: true,
-        shouldImport: true,
-        shouldTimeTravel: true
-      }
-      */
-    },
+    'gridsome-plugin-tailwindcss',
     {
       use: 'gridsome-plugin-pwa',
       options: {
@@ -111,5 +88,21 @@ module.exports = {
         searchFields: ['title', 'handle', 'tags']
       }
     }
-  ]
+  ],
+  templates: {
+    ShopifyProduct: [
+      {
+        path: '/product/:handle',
+        component: './src/templates/Product.vue'
+      }
+    ],
+    ShopifyCollection: [
+      {
+        path: '/collection/:handle',
+        component: './src/templates/Collection.vue'
+      }
+    ]
+  },
+  transformers: {
+  },
 }

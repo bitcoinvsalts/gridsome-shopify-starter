@@ -1,22 +1,14 @@
 <template>
   <Layout>
-    <div class="hero">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h3 class="title">
-            Cart
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <table class="table is-fullwidth">
+    <div class="container-inner mx-auto my-16">
+
+      <table class="w-full table-auto">
         <thead>
           <tr>
             <th />
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Total</th>
+            <th class="px-4 py-2">Product</th>
+            <th class="px-4 py-2">Quantity</th>
+            <th class="px-4 py-2">Total</th>
             <th />
           </tr>
         </thead>
@@ -25,11 +17,9 @@
             v-for="item in cart"
             :key="item.variantId">
             <td>
-              <figure class="image is-square">
-                <g-image
-                  :src="item.image.thumbnail"
-                  :alt="item.image.altText || item.title" />
-              </figure>
+              <g-image
+                :src="item.image.thumbnail"
+                :alt="item.image.altText || item.title" />
             </td>
             <td>
               {{ item.productTitle }}
@@ -37,11 +27,9 @@
             </td>
             <td>{{ item.qty }}</td>
             <td>{{ totalPrice(item) }}</td>
-            <td
-              width="200"
-              class="has-text-right">
+            <td>
               <button
-                class="delete is-danger"
+                class=""
                 @click="removeItem(item.variantId)"
                 @keyup="removeItem(item.variantId)">
                 <small>Remove</small>
@@ -62,38 +50,31 @@
         </tfoot>
       </table>
       <br>
-      <form
-        v-if="cart.length"
-        @submit.prevent="checkout">
-        <div class="field is-grouped is-grouped-right">
-          <div class="field has-addons">
-            <div class="control">
-              <label
-                for="email"
-                class="label">
-                <input
-                  id="email"
-                  v-model="email"
-                  class="input"
-                  type="email"
-                  placeholder="Your email address"
-                  required>
-              </label>
-            </div>
-            <div class="control">
-              <button
-                :class="{'is-loading': isLoading}"
-                type="submit"
-                class="button is-primary">
-                Checkout
-              </button>
-            </div>
+
+      <form v-if="cart.length" @submit.prevent="checkout">
+        <div class="flex mx-auto">
+          <div class="w-1/2">
+            <input
+              id="email"
+              v-model="email"
+              class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+              type="email"
+              placeholder="Your email address"
+              required>
+          </div>
+          <div class="w-1/2">
+            <button type="submit"
+              :class="{'is-loading': isLoading}"
+              class="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+              Checkout
+            </button>
           </div>
         </div>
       </form>
+
       <div
         v-else
-        class="container has-text-centered">
+        class="txt-xl">
         <p>To checkout, add some items to cart.</p>
         <br>
         <g-link
@@ -102,6 +83,7 @@
           Browse
         </g-link>
       </div>
+
     </div>
   </Layout>
 </template>

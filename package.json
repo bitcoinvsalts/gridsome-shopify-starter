@@ -1,6 +1,5 @@
 {
   "name": "gridsome-shopify-starter",
-  "private": true,
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
@@ -9,18 +8,19 @@
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/plugin-sitemap": "^0.3.0",
-    "apollo-boost": "0.4.9-test.0",
+    "apollo-boost": "^0.4.9",
+    "axios": "^0.19.2",
     "currency.js": "^1.2.2",
     "graphql-tag": "^2.10.3",
     "gridsome": "^0.7.17",
     "gridsome-plugin-flexsearch": "^1.0.1",
-    "gridsome-plugin-pwa": "^0.0.13",
+    "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-robots": "^0.2.1",
     "gridsome-source-shopify": "^0.1.13",
     "isomorphic-fetch": "^2.2.1",
-    "typeface-prata": "^0.0.72",
     "vue-apollo": "^3.0.3",
     "vue-notification": "^1.3.20",
+    "vue-scrollto": "^2.18.1",
     "vuex": "^3.4.0"
   },
   "devDependencies": {

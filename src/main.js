@@ -10,23 +10,26 @@ import '~/assets/style/notification.css'
 import ApolloClient from 'apollo-boost'
 import fetch from 'isomorphic-fetch'
 
-// Layouts
 import DefaultLayout from '~/layouts/Default.vue'
+import VueScrollTo from 'vue-scrollto'
 
-// Styles
-//import Buefy from 'buefy'
-//import 'buefy/dist/buefy.css'
-import 'typeface-prata'
-
-export default function (Vue, { appOptions }) {
+export default function (Vue, { appOptions, router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  // Import global plugins
   Vue.use(Vuex)
   Vue.use(VueApollo)
-  //Vue.use(Buefy)
   Vue.use(Notifications)
+
+  Vue.use(VueScrollTo, {
+    duration: 500,
+    easing: "ease",
+  })
+
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Prata'
+  })
 
   // Create Apollo client
   const apolloClient = new ApolloClient({
@@ -64,3 +67,5 @@ export default function (Vue, { appOptions }) {
     }
   })
 }
+
+
