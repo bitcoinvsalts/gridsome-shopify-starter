@@ -50,8 +50,6 @@
       </nav>
     </header>
 
-    <notifications />
-
     <div class="flex-grow">
       <slot/>
     </div>

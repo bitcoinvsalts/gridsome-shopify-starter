@@ -44,6 +44,8 @@
       </div>
       <br>
 
+      <notifications />
+
       <div class="flex mx-auto">
         <div class="w-1/2">
           <input
