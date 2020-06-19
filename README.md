@@ -7,13 +7,15 @@ This is a boilerplate starter, optmized to reach the highest scores on Google Li
 ## Features
 
 - Full SSR (Server Side Redenring) Static Site
+- Progressive Web App (PWA) with "Add to Home Screen" button.
 - Connected to Shopify backend
-- Home Page with Featured Products
+- Home Page showing Featured Products
 - Product Search
 - Product Page
 - Collection Search
 - All Collections Page
-- TailwindCSS with PurgeCSS
+- TailwindCSS with PurgeCSS to remove unused css.
+- SEO optimized
 - Sitemap
 
 ## Shopify Setup
