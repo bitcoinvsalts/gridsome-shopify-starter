@@ -4,13 +4,17 @@
 
 This is a boilerplate starter, optmized to reach the highest scores on Google Lighthouse, aiming to showcase how Gridsome and Shopify can work together, to create an amazingly fast shopping experience for consumers. [View Demo](https://gridsome-shopify.netlify.com)
 
-## Shopify Setup
+## Features
 
+- Full SSR (Server Side Redenring) Static Site
+- Connected to Shopify backend
+- Home Page with Featured Products
+- Product Search
+- Product Page
+- Collection Search
+- All Collections Page
 - TailwindCSS with PurgeCSS
 - Sitemap
-- Product Search
-- Full SSR (Server Side Redenring)
-- Connected to Shopify backend
 
 ## Shopify Setup
 
