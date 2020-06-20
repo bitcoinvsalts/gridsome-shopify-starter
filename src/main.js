@@ -26,10 +26,12 @@ export default function (Vue, { appOptions, router, head, isClient }) {
     easing: "ease",
   })
 
+  /*
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Prata'
   })
+  */
 
   // Create Apollo client
   const apolloClient = new ApolloClient({
