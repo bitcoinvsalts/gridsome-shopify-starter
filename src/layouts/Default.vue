@@ -1,7 +1,9 @@
 <template>
   <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen" :class="theme">
     <header class="border-t-14 border-gray-900">
-      <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
+      <nav class="container mx-auto flex flex-wrap justify-between items-center py-8" 
+      role="navigation"
+      aria-label="main navigation">
 
         <div class="mx-auto">
           <g-link to="/"><div class="font-serif text-4xl font-bold text-center">Gridsome Shopify</div></g-link>        
