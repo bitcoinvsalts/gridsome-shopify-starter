@@ -4,8 +4,11 @@
 
 This is a boilerplate starter, optmized to reach the highest scores on Google Lighthouse, aiming to showcase how Gridsome and Shopify can work together, to create an amazingly fast shopping experience for consumers. [View Demo](https://gridsome-shopify.netlify.com)
 
+<img src="lighthouse.png">
+
 ## Features
 
+- 4 x 100% Highest Scores on Google Lighthouse!
 - Full SSR (Server Side Redenring) Static Site
 - Progressive Web App (PWA) with "Add to Home Screen" button.
 - Connected to Shopify backend
