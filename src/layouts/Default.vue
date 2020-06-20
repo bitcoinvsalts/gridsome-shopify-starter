@@ -53,7 +53,9 @@
     </header>
 
     <div class="flex-grow">
-      <slot/>
+      <main>
+        <slot/>
+      </main>
     </div>
 
     <footer class="bg-gray-900 text-white">
