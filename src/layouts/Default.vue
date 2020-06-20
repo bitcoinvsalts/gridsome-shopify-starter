@@ -1,6 +1,6 @@
 <template>
   <div class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen" :class="theme">
-    <header class="border-t-14 border-gray-900">
+    <header role="banner" class="border-t-14 border-gray-900">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8" 
       role="navigation"
       aria-label="main navigation">
@@ -53,12 +53,12 @@
     </header>
 
     <div class="flex-grow">
-      <main>
+      <main role="main">
         <slot/>
       </main>
     </div>
 
-    <footer class="bg-gray-900 text-white">
+    <footer role="contentinfo" class="bg-gray-900 text-white">
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
           <div>Copyright {{ new Date().getFullYear() }}. All rights reserved. v0.0.2</div>
