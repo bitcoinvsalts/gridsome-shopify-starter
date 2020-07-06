@@ -61,7 +61,7 @@
     <footer role="contentinfo" class="bg-gray-900 text-white">
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
-          <div>Copyright {{ new Date().getFullYear() }}. All rights reserved. v0.0.2</div>
+          <div>Copyright {{ new Date().getFullYear() }}. All rights reserved. v0.0.2 Made with ❤️ by <g-link to="https://gridsomify.com" alt="Gridsome + Shopify = Gridsomify">Gridsomify.com</g-link></div>
         </div>
         <ul class="flex items-center">
             <li class="mr-8">
