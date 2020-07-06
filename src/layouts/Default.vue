@@ -6,7 +6,7 @@
       aria-label="main navigation">
 
         <div class="mx-auto">
-          <g-link to="/"><div class="font-serif text-4xl font-bold text-center">Gridsome Shopify</div></g-link>        
+          <g-link to="https://gridsomify.com" alt="Gridsome Shopify"><div class="font-serif text-4xl font-bold text-center">Gridsome Shopify</div></g-link>        
         </div>
 
         <div class="block lg:hidden">
