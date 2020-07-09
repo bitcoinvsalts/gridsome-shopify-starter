@@ -3,7 +3,7 @@
 
     <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
       <div class="text-4xl font-bold w-full text-center">
-        <div class="leading-tight font-serif">How to deploy a PWA headless <span class="text-green-700">Shopify</span> site using <span class="text-green-700">Gridsome</span>.</div>
+        <div class="leading-tight font-serif"><a href="https://gridsomify.com" alt="Gridsome Shopify" target="_new">How to deploy a PWA headless <span class="text-green-700">Shopify</span> site using <span class="text-green-700">Gridsome</span></a>.</div>
       </div>
     </div>
 
