@@ -28,12 +28,12 @@
               <g-link v-else to="/collections" class="text-copy-primary hover:text-gray-600">Collections</g-link>
             </li>
             <li>
-              <a v-if="$route.path === '/'" href="/#about" v-scroll-to="'#about'" class="text-copy-primary hover:text-gray-600">About</a>
-              <g-link v-else to="/#about" class="text-copy-primary hover:text-gray-600">About</g-link>
+              <a v-if="$route.path === '/'" href="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">About</a>
+              <g-link v-else to="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">About</g-link>
             </li>
             <li>
-              <a v-if="$route.path === '/'" href="/#contact" v-scroll-to="'#contact'" class="text-copy-primary hover:text-gray-600">Contact</a>
-              <g-link v-else to="/#contact" class="text-copy-primary hover:text-gray-600">Contact</g-link>
+              <a v-if="$route.path === '/'" href="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">Contact</a>
+              <g-link v-else to="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">Contact</g-link>
             </li>
             <li>
               <search-input />
