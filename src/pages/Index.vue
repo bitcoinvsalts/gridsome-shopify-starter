@@ -36,7 +36,10 @@ export default {
     title: 'Home'
   },
   computed: {
-    featuredProducts () { return this.$page.allShopifyProduct.edges }
+    //featuredProducts () { return this.$page.allShopifyProduct.edges }
+    featuredProducts () { 
+      return this.$page.allShopifyProduct.edges.filter(prod => prod.node.availableForSale === true)
+    }
   },
   methods: {
 		selectProduct(product) {
@@ -54,6 +57,7 @@ query ShopifyProducts {
         id
         title
         handle
+        availableForSale
         descriptionHtml
         priceRange {
           minVariantPrice {
