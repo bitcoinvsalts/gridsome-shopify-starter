@@ -26,7 +26,7 @@ module.exports = {
           gcm_sender_id: undefined,
           statusBarStyle: 'default',
           manifestPath: 'manifest.json',
-          disableServiceWorker: false,
+          disableServiceWorker: true,
           serviceWorkerPath: 'service-worker.js',
           cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg',
           shortName: 'Gridsome Shopify',

@@ -12,7 +12,7 @@
     "axios": "^0.19.2",
     "currency.js": "^1.2.2",
     "graphql-tag": "^2.10.3",
-    "gridsome": "^0.7.17",
+    "gridsome": "^0.7.19",
     "gridsome-plugin-flexsearch": "^1.0.1",
     "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-robots": "^0.2.1",
